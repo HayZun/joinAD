@@ -11,7 +11,7 @@
 ##### VARS
 DOMAIN=""
 DNS=""
-ADMIN="dca_paul.durieux"
+ADMIN=""
 OU=""
 
 # wifi
