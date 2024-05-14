@@ -29,4 +29,4 @@ nmcli device wifi connect TEAM password 'team2022'
 sudo realm -v discover $DOMAIN
 
 #
-sudo realm join $DOMAIN --user=$ADMIN --computer-ou="OU=Linux,OU=Portables,OU=Ordinateurs,DC=humans,DC=local humans.local" --install=/
+sudo realm join $DOMAIN --user=$ADMIN --computer-ou=$OU
