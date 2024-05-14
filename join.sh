@@ -30,4 +30,4 @@ nmcli device wifi connect $SSID_WIFI_AD password $PASSWORD_WIFI_AD
 sudo realm -v discover $DOMAIN
 
 
-sudo realm join $DOMAIN --user=$ADMIN --computer-ou="OU=Linux,OU=Portables,OU=Ordinateurs,DC=humans,DC=local humans.local" --install=/
+sudo realm join $DOMAIN --user=$ADMIN --computer-ou=$OU
