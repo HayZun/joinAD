@@ -7,8 +7,6 @@
 # - avoir les packages apt "sssd-ad sssd-tools realmd" installé
 
 ##### VARS
-
-##### VARS
 DOMAIN=""
 DNS=""
 ADMIN=""
