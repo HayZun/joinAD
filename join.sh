@@ -8,21 +8,27 @@
 
 ##### VARS
 
-# config
-DOMAIN="XXXXXX"
+##### VARS
+DOMAIN=""
 DNS=""
+ADMIN="dca_paul.durieux"
+OU=""
+
+# wifi
+SSID_WIFI_AD=""
+PASSWORD_WIFI_AD=""
+HOSTNAME=""
 
 # AD
 ADMIN_DCA=""
 PASSWORD_DCA=""
 OU_PATH_COMPUTERS=""
 
-## wifi
-SSID_WIFI_AD=""
-PASSWORD_WIFI_AD=""
+# changer le nom du pc
+hostnamectl set-hostname $HOSTNAME.$DOMAIN
 
 # se connecter au wifi TEAM
-nmcli device wifi connect $SSID_WIFI password $PASSWORD_WIFI
+nmcli device wifi connect $SSID_WIFI_AD password $PASSWORD_WIFI_AD
 
 ## setup le DNS
 # stoper service systemd-resolved
@@ -34,6 +40,8 @@ echo "nameserver $DNS" >> /etc/resolv.conf
 
 ## join AD
 realm -v discover $DOMAIN
+
+sleep 10
 
 #
 echo $PASSWORD_DCA | realm join --user=$ADMIN_DCA --computer-ou=$OU_PATH_COMPUTERS $DOMAIN
